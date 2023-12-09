@@ -2,7 +2,17 @@
 Custom Logger
 """
 
+import os
 import logging
+
+class StringFormatter(logging.Formatter):
+    """
+    String formatter
+    """
+    def format(self, record):
+        # Convert the log message to a string
+        record.msg = str(record.msg)
+        return super().format(record)
 
 class CustomLogger:
     def __init__(self, name, log_file=None):
@@ -11,7 +21,7 @@ class CustomLogger:
         self.logger.setLevel(logging.DEBUG)
 
         # Configure the log format
-        formatter = logging.Formatter('\n%(asctime)s - %(levelname)s - %(name)s - %(message)s \n')
+        formatter = StringFormatter('\n%(asctime)s - %(name)s - %(levelname)s: \n%(message)s \n')
 
         # Configure the console handler
         console_handler = logging.StreamHandler()
@@ -20,34 +30,28 @@ class CustomLogger:
 
         # Configure the file handler if a log file is provided
         if log_file:
-            file_handler = logging.FileHandler(log_file)
+            log_folder = 'reports'
+            log_file_path = os.path.join(log_folder, log_file)
+            file_handler = logging.FileHandler(log_file_path, mode='w')
+
             file_handler.setFormatter(formatter)
             self.logger.addHandler(file_handler)
 
-    def log_debug(self, message):
-        self.logger.debug(message)
-
-    def log_info(self, message):
-        self.logger.info(message)
-
-    def log_warning(self, message):
-        self.logger.warning(message)
-
-    def log_error(self, message):
-        self.logger.error(message)
-
-    def log_critical(self, message):
-        self.logger.critical(message)
+    def get_logger(self):
+        """
+        Get logger
+        """
+        return self.logger
 
 # Example of usage
 if __name__ == "__main__":
     # Create an instance of the CustomLogger class
-    logger = CustomLogger(name='my_logger', log_file='log_file.txt')
+    logger = CustomLogger(name='my_logger', log_file='test_log.log').get_logger()
 
     # Examples of log messages
-    logger.log_debug("This is a debug message.")
-    logger.log_info("This is an informational message.")
-    logger.log_warning("This is a warning message.")
-    logger.log_error("This is an error message.")
-    logger.log_critical("This is a critical message.")
+    logger.debug("This is a debug message.")
+    logger.info("This is an informational message.")
+    logger.warning("This is a warning message.")
+    logger.error("This is an error message.")
+    logger.critical("This is a critical message.")
 
