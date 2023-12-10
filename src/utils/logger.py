@@ -21,7 +21,7 @@ class CustomLogger:
         self.logger.setLevel(logging.DEBUG)
 
         # Configure the log format
-        formatter = StringFormatter('\n%(asctime)s - %(name)s - %(levelname)s: \n%(message)s \n')
+        formatter = StringFormatter('%(asctime)s - %(name)s - %(levelname)s: \n%(message)s \n')
 
         # Configure the console handler
         console_handler = logging.StreamHandler()
