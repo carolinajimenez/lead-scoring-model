@@ -1,9 +1,15 @@
+# -*- coding: utf-8 -*-
 """
 Custom Logger
 """
 
+__author__ = "Carolina Jiménez Moreno <cjimenezm0794@gmail.com>"
+__version__ = "1.0.0"
+
+# Standard library imports.
 import os
 import logging
+
 
 class StringFormatter(logging.Formatter):
     """
