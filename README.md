@@ -3,6 +3,7 @@
 This project aims to develop a lead scoring model to predict the probability of conversion for potential clients into paying customers. The model is trained using data provided by the client from their Event Management SaaS application.
 
 ## Directory Structure
+```
 .       
 ├── README.md                           # Project documentation.        
 ├── data                                # Contains raw and processed data files.        
@@ -30,7 +31,8 @@ This project aims to develop a lead scoring model to predict the probability of 
     │   ├── predict_model.py                
     │   └── train_model.py              
     └── utils               
-        └── logger.py               
+        └── logger.py    
+```           
 
 
 ## Data Description
