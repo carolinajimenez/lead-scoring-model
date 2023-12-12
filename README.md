@@ -5,32 +5,32 @@ This project aims to develop a lead scoring model to predict the probability of 
 ## Directory Structure
 .       
 ├── README.md                           # Project documentation.        
-├── data                                # Contains raw and processed data       files.
-│   ├── interim     
+├── data                                # Contains raw and processed data files.        
+│   ├── interim             
 │   │   ├── full_dataset.csv        
-│   │   └── leads_data_cleaned.csv      
-│   ├── processed       
-│   │   └── full_dataset.csv        
-│   └── raw     
-│       ├── leads.csv       
-│       └── offers.csv      
-├── docs        
-├── models      
-├── notebooks       
-│   └── data_preprocessing.ipynb        
-├── reports     
-│   ├── leads_report.html       
+│   │   └── leads_data_cleaned.csv              
+│   ├── processed               
+│   │   └── full_dataset.csv                
+│   └── raw             
+│       ├── leads.csv               
+│       └── offers.csv              
+├── docs                
+├── models              
+├── notebooks               
+│   └── data_preprocessing.ipynb                
+├── reports             
+│   ├── leads_report.html               
 │   ├── model_training.log      
-│   └── offers_report.html      
-├── requirements.txt                    # Required dependencies for the         project.
-└── src                                 # Contains source code for the      project.
-    ├── app.py      
-    ├── models      
-    │   ├── __init__.py     
-    │   ├── predict_model.py        
-    │   └── train_model.py      
-    └── utils       
-        └── logger.py       
+│   └── offers_report.html              
+├── requirements.txt                    # Required dependencies for the project.        
+└── src                                 # Contains source code for the project.        
+    ├── app.py              
+    ├── models              
+    │   ├── __init__.py             
+    │   ├── predict_model.py                
+    │   └── train_model.py              
+    └── utils               
+        └── logger.py               
 
 
 ## Data Description
