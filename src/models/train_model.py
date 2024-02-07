@@ -127,7 +127,7 @@ class ModelTraining:
         data_original = pd.read_csv("data/interim/full_dataset.csv")
         X_test_original = data_original.loc[X_test.index]
         # Diccionario de mapeo
-        mapping = {0: 'Closed Won', 1: 'Closed Lost', 2: 'Other'}
+        mapping = {0: 'Closed Lost', 1: 'Closed Won', 2: 'Other'}
 
         # Aplicar el mapeo a y_predicted
         y_predicted_mapped = np.vectorize(mapping.get)(y_predicted)

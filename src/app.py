@@ -53,7 +53,7 @@ def main():
     # Create dashboard tasks
     page_header(s, 0)
     prediction_table(s, 7, data['predictions_df'])
-    distribution_chart(s, 11, data['doughnut_chart_data'])
+    # distribution_chart(s, 11, data['doughnut_chart_data'])
 
     # Execute all tasks
     s.run()
