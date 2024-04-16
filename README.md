@@ -25,7 +25,8 @@ This project aims to develop a lead scoring model to predict the probability of 
 │   └── offers_report.html              
 ├── requirements.txt                    # Required dependencies for the project.        
 └── src                                 # Contains source code for the project.        
-    ├── app.py              
+    ├── app.py                            
+    ├── data 
     ├── models              
     │   ├── __init__.py             
     │   ├── predict_model.py                
@@ -36,6 +37,8 @@ This project aims to develop a lead scoring model to predict the probability of 
 
 
 ## Data Description
+
+There're 2 datasets that reflect the phases in the client’s sales process: **leads.csv** (data of all potential clients) and **offers.csv** (clients that got at least to the demo meeting). The target column will be Status from the offers dataset, which indicates whether a client has bought the product.
 
 ### leads.csv
 - **Id:** Unique identifier for the lead.

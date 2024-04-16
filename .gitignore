@@ -1,2 +1,7 @@
+# CACHE
+__pycache__/
+*/__pycache__/
+
+# REPORTS
 *.pdf
 reports/*.log
